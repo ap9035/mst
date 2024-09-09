@@ -10,7 +10,7 @@ use crate::outputs::StdOutput;
 #[derive(Parser)]
 #[clap(name = "mp", version = "0.1.0", author = "Chien-De Li", about="Multi-threaded message producer")]
 struct Config {
-    #[clap(long, help = "Input file path", value_parser(inputs::InputType::from_str), default_value = "Default", name="input-file")]
+    #[clap(long = "input-file", help = "Input file path", value_parser(inputs::InputType::from_str), default_value = "Default", name="input-file")]
     input_type: InputType,
     #[clap(long, default_value = "std-out", help = "Output type")]
     output_type: OutputType,
