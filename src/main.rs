@@ -14,9 +14,9 @@ struct Config {
     input_type: InputType,
     #[clap(long, default_value = "std-out", help = "Output type")]
     output_type: OutputType,
-    #[clap(long, required_if_eq("output_type", "Kafka"), help = "Kafka bootstrap server")]
+    #[clap(long, required_if_eq("output_type", "kafka"), help = "Kafka bootstrap server")]
     bootstrap_server: Option<String>,
-    #[clap(long, required_if_eq("output_type", "Kafka"), help = "Kafka topic")]
+    #[clap(long, required_if_eq("output_type", "kafka"), help = "Kafka topic")]
     topic: Option<String>,
     #[clap(long, help = "Number of threads", required = true)]
     nthreads: i64,
